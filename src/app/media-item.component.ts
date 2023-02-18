@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mw-media-item',
@@ -6,9 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./media-item.component.css']
 })
 export class MediaItemComponent {
-  @Input() mediaItem;
-
-  onDelete(){
+  onDelete() {
     console.log('deleted');
   }
 }

@@ -1,4 +1,7 @@
 <section>
+  <header>
+    <div>{{mediaItems |categoryList}}</div>
+  </header>
   <mw-media-item *ngFor="let mediaItem of mediaItems"
     [mediaItem]="mediaItem"
     (delete)="onMediaItemDelete($event)"

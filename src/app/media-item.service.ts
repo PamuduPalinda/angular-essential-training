@@ -1,10 +1,9 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class MediaItemService{
-    
+export class MediaItemService {
   mediaItems = [
     {
       id: 1,
@@ -48,18 +47,20 @@ export class MediaItemService{
       watchedOn: 1457166565384,
       isFavorite: false
     }
-    ];
+  ];
 
-    get(){
-        return this.mediaItems;
+  get() {
+    return this.mediaItems;
+  }
+
+  add(mediaItem) {
+    this.mediaItems.push(mediaItem);
+  }
+
+  delete(mediaItem) {
+    const index = this.mediaItems.indexOf(mediaItem);
+    if (index >= 0) {
+      this.mediaItems.splice(index, 1);
     }
-    delete(mediaItem){
-        const index = this.mediaItems.indexOf(mediaItem);
-        if (index>=0){
-            this.mediaItems.splice(index,1);
-        }
-    }
-    add(mediaItem){
-        this.mediaItems.push(mediaItem);
-    }
+  }
 }

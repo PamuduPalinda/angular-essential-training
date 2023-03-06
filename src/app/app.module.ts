@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
 import { MediaItemListComponent } from './media-item-list.component';
@@ -9,11 +10,11 @@ import { CategoryListPipe } from './category-list.pipe';
 import { MediaItemFormComponent } from './media-item-form.component';
 import { lookupListToken, lookupLists } from './providers';
 
-
 @NgModule({
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -24,10 +25,7 @@ import { lookupListToken, lookupLists } from './providers';
     MediaItemFormComponent
   ],
   providers: [
-    {provide: lookupListToken,useValue: lookupLists}
-  ],
-  bootstrap: [
+    { provide: lookupListToken, useValue: lookupLists },
     AppComponent
-  ],
 })
 export class AppModule {}

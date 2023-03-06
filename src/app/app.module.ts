@@ -27,5 +27,6 @@ import { lookupListToken, lookupLists } from './providers';
   providers: [
     { provide: lookupListToken, useValue: lookupLists },
     AppComponent
+  ]
 })
 export class AppModule {}

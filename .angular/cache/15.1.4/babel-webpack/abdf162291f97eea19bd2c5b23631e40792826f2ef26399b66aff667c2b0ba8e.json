@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { RouterModule } from '@angular/router';\nimport { MediaItemFormComponent } from './media-item-form.component';\nconst newItemRoutes = [{\n  path: '',\n  component: MediaItemFormComponent\n}];\nexport const newItemRouting = RouterModule.forChild(newItemRoutes);","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

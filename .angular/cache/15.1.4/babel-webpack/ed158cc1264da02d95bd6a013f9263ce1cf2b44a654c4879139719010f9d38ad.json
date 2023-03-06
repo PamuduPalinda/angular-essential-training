@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { InjectionToken } from \"@angular/core\";\nexport const lookupListToken = new InjectionToken('lookupListToken');\nexport const lookupLists = {\n  mediums: ['Movies', 'Series']\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

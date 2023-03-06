@@ -1,8 +1,9 @@
 <header>
   <h2>Add Media to Watch</h2>
 </header>
-<form [formGroup]="form" 
-(ngSubmit)="onSubmit(form.value)">
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
   <ul>
     <li>
       <label for="medium">Medium</label>
@@ -15,7 +16,7 @@
       <label for="name">Name</label>
       <input type="text" name="name" id="name" formControlName="name">
       <div *ngIf="form.get('name').hasError('pattern')" class="error">
-        Name has Invalid Characters
+        Name has invalid characters
       </div>
     </li>
     <li>
@@ -33,7 +34,10 @@
       <label for="year">Year</label>
       <input type="text" name="year" id="year" maxlength="4" formControlName="year">
       <div *ngIf="form.get('year').errors as yearErrors" class="error">
-        Must between {{yearErrors.year.min}} and {{yearErrors.year.max}}
+        Must be between 
+        {{yearErrors.year.min}}
+        and 
+        {{yearErrors.year.max}}
       </div>
     </li>
   </ul>
